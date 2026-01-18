@@ -3,8 +3,22 @@ import { api } from "../../../../convex/_generated/api";
 import { boolean } from "zod/v4";
 import { Id } from "../../../../convex/_generated/dataModel";
 
+
+export const useFile = (fileId: Id<"files"> | null) => {
+    return useQuery(api.files.getFile, fileId ? { id: fileId } : "skip");
+};
+
+export const useFilePath = (fileId: Id<"files"> | null) => {
+    return useQuery(api.files.getFilePath, fileId ? { id: fileId } : "skip");
+};
+
+export const useUpdateFile = () => {
+    return useMutation(api.files.updateFile);
+};
+
 export const useCreateFile = () => {
     return useMutation(api.files.createFile);
+    // TODO: Add optimistic mutation
 };
 
 export const useCreateFolder = () => {
