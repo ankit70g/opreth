@@ -15,6 +15,7 @@ import { ProjectsList } from "./projects-list";
 import { useCreateProject } from "../hooks/use-projects";
 import { useEffect, useState } from "react";
 import { ProjectsCommandDialog } from "./projects-command-dialog";
+import { SparkleIcon } from "lucide-react";
 
 const font = Poppins({
     subsets: ["latin"],
@@ -51,7 +52,7 @@ export const ProjectView = () => {
                 <div className="w-full max-w-sm mx-auto flex flex-col gap-4 items-center">
                     <div className="flex justify-between gap-4 w-full items-center">
                         <div className="flex items-center gap-2 w-full group/logo">
-                            <img src="/logo.svg" alt="Opreth" className="size-[32px] md:size-[46px]" />
+                            <img src="/logo.svg" alt="Opreth" className="size-8 md:size-11.5" />
                             <h1 className={cn(
                                 "text-4xl md:text-5xl font-semibold",
                                 font.className,
@@ -81,7 +82,7 @@ export const ProjectView = () => {
                                 className="h-full items-start justify-start p-4 bg-background border flex flex-col gap-6 rounded-none"
                             >
                                 <div className="flex items-center justify-between w-full">
-                                    <FaGithub className="size-4" />
+                                    <SparkleIcon className="size-4" />
                                     <Kbd className="bg-accent border">
                                         XJ
                                     </Kbd>
