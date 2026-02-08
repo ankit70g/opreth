@@ -1,11 +1,5 @@
 "use client";
 
-import {
-    adjectives,
-    animals,
-    colors,
-    uniqueNamesGenerator,
-} from "unique-names-generator";
 import { Button } from "@/components/ui/button";
 import { Kbd } from "@/components/ui/kbd";
 import { cn } from "@/lib/utils";
@@ -25,10 +19,8 @@ const font = Poppins({
 });
 
 export const ProjectView = () => {
-    const createProject = useCreateProject();
     const [importDialogOpen, setImportDialogOpen] = useState(false);
     const [newProjectDialogOpen, setNewProjectDialogOpen] = useState(false);
-
     const [commandDialogOpen, setCommandDialogOpen] = useState(false);
 
     useEffect(() => {
@@ -85,20 +77,7 @@ export const ProjectView = () => {
                         <div className="grid grid-cols-2 gap-2">
                             <Button
                                 variant="outline"
-                                onClick={() => {
-                                    const projectName = uniqueNamesGenerator({
-                                        dictionaries: [
-                                            adjectives,
-                                            animals,
-                                            colors
-                                        ],
-                                        separator: "_",
-                                        style: "capital"
-                                    });
-                                    createProject({
-                                        name: projectName
-                                    });
-                                }}
+                                onClick={() => setNewProjectDialogOpen(true)}
                                 className="h-full items-start justify-start p-4 bg-background border flex flex-col gap-6 rounded-none"
                             >
                                 <div className="flex items-center justify-between w-full">
