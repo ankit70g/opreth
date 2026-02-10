@@ -8,7 +8,7 @@
 </p>
 
 <p align="center" style="max-width: 720px; margin: auto; line-height: 1.6;">
-  Opreth isn't just another code editor—it's your AI-powered development companion that runs entirely in your browser.
+  Opreth isn't just another code editor, it's your AI-powered development companion that runs entirely in your browser.
   Inspired by the power of modern AI assistants and the flexibility of cloud IDEs, Opreth combines the best of both
   worlds to create a seamless coding experience.
 </p>
